@@ -10,7 +10,6 @@ In This lesson we will look at using CSS3 Media Queries to detect viewport sizes
 2. Media Query syntax.
 3. Accepted Devices.
 4. Min and max conditions.
-5. Determining breakpoints based on your unique content.
 
 ## Introducing Media Queries
 
