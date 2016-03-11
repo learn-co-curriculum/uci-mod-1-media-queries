@@ -12,7 +12,7 @@ In This lesson we will look at using CSS3 Media Queries to detect viewport sizes
 4. Min and max conditions.
 5. Determining breakpoints based on your unique content.
 
-## Writing Media Queries
+## Introducing Media Queries
 
 <iframe width="640" height="480" src="//www.youtube.com/embed/MYOT5FDG8gk?rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
 
