@@ -10,6 +10,7 @@ In This lesson we will look at using CSS3 Media Queries to detect viewport sizes
 2. Media Query syntax.
 3. Accepted Devices.
 4. Min and max conditions.
+5. Choosing break point sizes.
 
 ## Introducing Media Queries
 
@@ -79,11 +80,16 @@ Here we are changing the text color to green only on screens that are between 40
 
 One nice thing about media queries is that they automatically inherit all of the styles written outside of their `{}` braces. So inside the media query we only need to write the css for the properties we wish to change. Later on we will look at some practical ways to use media queries in real life situations within our website.
 
+### At What Size Should I Create Break Points?
+
+Let your content determine where break points should fall. Use Developer Tools and Emulators to discover where your content starts to break down. Then create an appropriate break point (media query at that width) to solve the issue. This will ensure that your content looks good on any and all devices not just the popular ones.
+
 ## Summary
 
 - CSS Media Queries provide us a way to alter our CSS at a specific screen sizes.
 - The syntax is `@media only screen and (max-width: 800px){ ... }`.
 - We can use `max-width` condition expressions to trigger styles below a certain size and we can use `min-width` condition expressions to trigger styles above a certain size.
+- Allow your unique content to determine at which sizes to write media query break points. Write them as you need them at whatever size your content starts to become awkward looking.
 
 ## Resources
 
