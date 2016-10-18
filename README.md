@@ -60,7 +60,7 @@ p { color: red; }
 }
 ```
 
-Here on line 2 we set the default color of paragraphs to red text again. In our media query on line 5 we set the query Meaning the minimum size of the screen must be 400px or above. Said another way, this will not trigger from devices that are below 400px, but will be switched on above 400px.
+Here on line 2 we set the default color of paragraphs to red text again. In our media query on line 5 we set the query, meaning the minimum size of the screen must be 400px or above. Said another way, this will not trigger from devices that are below 400px, but will be switched on above 400px.
 
 So, max-width sets a breakpoint that triggers as a screen gets smaller than  the specified size and min-width will trigger when a screen raises above a certain size.
 
