@@ -1,11 +1,9 @@
 # CSS Media Queries
 
 ## Overview
-
 In this lesson we will look at using CSS3 Media Queries to detect viewport sizes and adjust CSS styles accordingly.
 
 ## Objectives
-
 1. The purpose of media queries.
 2. Media Query syntax.
 3. Accepted Devices.
@@ -13,19 +11,15 @@ In this lesson we will look at using CSS3 Media Queries to detect viewport sizes
 5. Choosing break point sizes.
 
 ## Introducing Media Queries
-
 <iframe width="640" height="480" src="//www.youtube.com/embed/MYOT5FDG8gk?rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
 
 *Note: Slides for this lecture video are provided in the resources at the bottom of this lesson.*
 
 ### What are Media Queries
-
 Media Queries allow us to measure the device viewport (screen) size and then adjust our CSS layout and content accordingly so it best suits each size device.
 
 ### Syntax
-
-Below is the syntax for writing a media query statement within our CSS code,
-
+Below is the syntax for writing a media query statement within our CSS code:
 ```css
 @media [not|only] type [and] (expr) [,] … {
     rules
@@ -34,8 +28,7 @@ Below is the syntax for writing a media query statement within our CSS code,
 
 We start by using the `@media` keyword followed by the condition statements that will trigger the media query on or off. The logical keywords "not" or "only" can optionally be provided to trigger queries for specific devices using `only` or for every device except a particular kind of device using the `not` keyword. These logical keywords are followed by the device type. At the time of writing this the only currently well supported device types are: screen, print, or all (meaning all devices). We can use `and` and `,` to separate conditions. Using `and` requires that both conditions on each side of the `and` are both true in order for the query to trigger on. The `,` stands for "or" meaning that only one of the conditions on either side of the comma has to be true for the query to trigger on. We use condition expressions surrounded by `()` parentheses to set up a condition that must be true in order for the query to trigger on and that will be false for the query to not be triggered. This is followed by a set of `{}` curly braces that enclose the CSS selectors and rules that will be applied when the media query is triggered.
 
-To give better context, let's create a media query that will change a paragraph's text from red to green when the screen size falls below 800px,
-
+To give better context, let's create a media query that will change a paragraph's text from red to green when the screen size falls below 800px:
 ```css
 /* initial style */
 p { color: red; }
@@ -46,10 +39,9 @@ p { color: red; }
 }
 ```
 
-Here on line 2 we are writing some intial style that will be applied when our media query is switched off (untriggered). We have set our paragraph to have red text. Then on line 5 we create a media query using `@media` and set it to only trigger for `only screen` screen devices `and` for devices whose screen size is within the condition `(max-width: 800px)`. Here max-width means any screen size whose maximum width is no larger than 800px, or in other words only screens less than 801px. Said another way, this will trigger for devices with screens that are 800px or less. Following the condition is `{}` curly braces which enclose the styles that will be switched on when the condition above is true. In our case on line 6 we will change the text color of paragraphs to green instead of red. To clarify once more, on devices with screen sizes 800px or less will display paragraphs with green text and on devices larger than 800px we will display paragraphs with red colored text.
+On the second line we provide some initial style that will be applied _unless_ our media query triggers. We have set our paragraph to have red text. On line 5, we create a media query using `@media` and set it to `only` trigger for `screen` devices that have a `max-width` of `800px`. In other words, the style will only be applied on screens that are less than 801px wide. Following the condition are a pair of curly braces (`{}`) that enclose the style(s) to be applied when the condition is met. In our case, on screens that are `800px` wide or less, we change the text color of paragraphs to green instead of red.
 
-For our size conditions we can use the properties min-width, max-width, min-height, and max-height; all refering to the size of the devices viewport (or screen size). Above, we looked at max-width; now let's explore min-width:
-
+For our size conditions we can use the properties `min-width`, `max-width`, `min-height`, and `max-height`, all referring to the size of the device's viewport (i.e., the screen size). Above, we looked at `max-width`; now let's explore `min-width`:
 ```css
 /* initial style */
 p { color: red; }
@@ -60,12 +52,11 @@ p { color: red; }
 }
 ```
 
-Here on line 2 we set the default color of paragraphs to red text again. In our media query on line 5 we set the query, meaning the minimum size of the screen must be 400px or above. Said another way, this will not trigger from devices that are below 400px, but will be switched on above 400px.
+On line 2, we set the default color of paragraphs to red again. On line 5, we set the terms of our media query — namely, that the width of the `screen` device must be `400px` or more.
 
-So, max-width sets a breakpoint that triggers as a screen gets smaller than  the specified size and min-width will trigger when a screen raises above a certain size.
+So, `max-width` sets a breakpoint that triggers when a screen is smaller than the specified size, and `min-width` triggers when a screen is larger than a certain size.
 
-As mentioned prior, we can use the `and` keyword to chain mutliple condition expressions together. Let's look at that example,
-
+As mentioned before, we can use the `and` keyword to chain multiple conditions together. Let's look at an example of that:
 ```css
 /* initial style */
 p { color: red; }
