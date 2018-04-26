@@ -175,15 +175,6 @@ content starts to become awkward looking.
 
 ## Resources
 
-<iframe width="640" height="480"
-src="//www.youtube.com/embed/MYOT5FDG8gk?rel=0&modestbranding=1" frameborder="0"
-allowfullscreen></iframe>
-
-*Note: Slides for this lecture video are provided in the resources at the bottom
-*of this lesson.*
-
-- [Presentation
-- Slides](https://docs.google.com/presentation/d/1j_i5pGPB5lHbgr4fpdUDheRBv2kAeOk_yhfd1Uc2f3s/edit?usp=sharing)
 - [MDN - CSS - Media
 - Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 - [CSS Tricks - Media Queries](https://css-tricks.com/css-media-queries/)
