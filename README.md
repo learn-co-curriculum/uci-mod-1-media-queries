@@ -1,24 +1,29 @@
 # CSS Media Queries
 
-## Overview
+## Problem Statement
 
-In this lesson, we will look at using CSS3 Media Queries to detect viewport sizes
-and adjust CSS styles accordingly.
+A component of designing and building responsive layouts is being mindful
+of the wide variety of screen sizes. Originally, media queries could be used
+to set specific breakpoints based on a specific set of devices. As the market
+of web-connected electronics has grown, media queries have evolved to be more 
+inclusive of new sizes and aspect ratios. What are media queries, exactly, and 
+how can they be taken advantage of in building page layouts?
 
 ## Objectives
 
-1. The purpose of media queries
-2. Media Query syntax
-3. Accepted Devices
-4. Min and max conditions
-5. Choosing break point sizes
+1. What is the purpose of media queries
+2. What is the Media Query syntax
+3. Where should break points be created
 
-### What are Media Queries
+## What is the Purpose of Media Queries?
 
-Media Queries allow us to measure the device viewport (screen) size and then
-adjust our CSS layout and content accordingly so it best suits each size device.
+Media queries are a feature of CSS. Media queries sets of styles that are 
+triggered by specific conditions. Media Queries are most used for measuring 
+the device viewport (screen) size and then adjust our CSS layout and content 
+accordingly so it best suits each size device. It can also be used for setting
+print styles. 
 
-### Syntax
+## What is the Media Query Syntax?
 
 Below is the syntax for writing a media query statement within our CSS code:
 
@@ -147,7 +152,7 @@ need to write the CSS for the properties we wish to change. With a set of
 different media queries, it is possible to have specific styling for mobile and
 desktop screen sizes, along with tablet screen sizes in between.
 
-### At What Size Should I Create Break Points?
+## Where Should Break Points Be Created?
 
 Let your content determine where break points should fall. Use Developer Tools
 and Emulators to discover where your content starts to break down. Then create
@@ -161,17 +166,17 @@ points to a minimum. You can, for instance, set a media query for `max-width:
 phones, but allow CSS grid to dynamically adjust the width of web page elements
 for smaller phones.
 
-## Summary
+## Conclusion
 
-* CSS Media Queries provide us a way to alter our CSS at specific screen
-sizes.
-* The syntax is `@media only screen and (max-width: 800px){ ... }`.
-*We can use `max-width` condition expressions to trigger styles below a certain
-size and we can use `min-width` condition expressions to trigger styles above
-a certain size. 
-* Allow your unique content to determine at which sizes to write
-media query break points. Write them as you need them at whatever size your
-content starts to become awkward looking.
+CSS Media Queries provide us a way to alter our CSS at specific screen
+sizes. Using the `max-width` condition expressions to trigger styles below 
+a certain size and the `min-width` condition expressions to trigger styles 
+above a certain size can help you build powerful, flexible interfaces for 
+various screen sizes and devices. Instead of trying to target specific device
+sizes, use the in-browser dev tools for experimentation, and allow your unique 
+content to determine at which sizes to write media query break points. Write 
+media queries as you need them at whatever size your content starts to 
+become unsightly.
 
 ## Resources
 
