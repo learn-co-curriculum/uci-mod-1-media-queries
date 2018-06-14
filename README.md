@@ -2,39 +2,63 @@
 
 ## Problem Statement
 
-A component of designing and building responsive layouts is being mindful
-of the wide variety of screen sizes. Originally, media queries could be used
-to set specific breakpoints based on a specific set of devices. As the market
-of web-connected electronics has grown, media queries have evolved to be more 
-inclusive of new sizes and aspect ratios. What are media queries, exactly, and 
-how can they be taken advantage of in building page layouts?
+The key to designing and building responsive layouts is being mindful
+of the wide variety of screen sizes. In the past, "breakpoints" were used
+to create styles for specific devices with certain screen sizes. As the market
+of web-connected electronics has grown, these techniques have evolved to be more
+inclusive of the vast number of new sizes and aspect ratios. These techniques are
+media queries. What are media queries, and how can they be taken advantage of in
+building page layouts?
 
 ## Objectives
 
-1. What is the purpose of media queries
-2. What is the Media Query syntax
-3. Where should break points be created
+1. What are breakpoints
+2. What is the purpose of media queries
+3. What is the media query syntax
+4. Where should break points be created
 
 ## What is the Purpose of Media Queries?
 
-Media queries are a feature of CSS. Media queries sets of styles that are 
-triggered by specific conditions. Media Queries are most used for measuring 
+Media queries are a feature of CSS. Media queries are sets of styles that are 
+triggered by specific conditions. Media queries are most used for measuring 
 the device viewport (screen) size and then adjust our CSS layout and content 
-accordingly so it best suits each size device. It can also be used for setting
-print styles. 
+accordingly so it best suits each size device. The points at which the layout
+adjusts based on screen size is called a "breakpoint".
 
 ## What is the Media Query Syntax?
 
-Below is the syntax for writing a media query statement within our CSS code:
+Below are a few examples of syntax for writing a media query statement within 
+our CSS code:
 
 ```css
-@media [not|only] mediatype [and] (expression) [,] … {
-  rules
+@media (max-width: 992px) {
+  body {
+    background-color: blue;
+  }
+}
+```
+Below are more specific and complete examples of the media query syntax:
+
+```css
+@media screen and (max-width: 992px) {
+  body {
+    background-color: blue;
+  }
+}
+
+```
+
+```css
+@media only screen and (max-width: 992px) {
+  body {
+    background-color: blue;
+  }
 }
 ```
 
-We start by using the `@media` keyword followed by conditional statements that
-will trigger the media query on or off.
+When defining a media query, we use the `@media` keyword followed by conditional
+statements that will trigger the media query on or off. Below we will break down
+each property available in media queries:
 
 #### `not`, `only`
 
@@ -45,12 +69,28 @@ _only_ on screens larger than 800px in height. It might also be the case that
 you want a CSS rule to apply to all devices, but _not_ screens smaller than
 400px wide.
 
+```css
+@media [not|only] screen and (max-width: 992px) {
+  body {
+    background-color: blue;
+  }
+}
+```
+
 #### `mediatype`
 
 Currently, the only well supported media types are: screen, print, or all
 (meaning all devices). Mobile, tablet, and desktop devices all fall within the
 _screen_ mediatype, while _print_ is used for displaying content in a 'print
-preview' mode.
+preview' mode. Most commonly we are concerned only with _screen_.
+
+```css
+@media [screen|print|all] and (max-width: 992px) {
+  body {
+    background-color: blue;
+  }
+}
+```
 
 #### `and`, `,`
 
@@ -62,6 +102,22 @@ conditions on each side of the `and` are true in order for the query to trigger.
 of the conditions on either side of the comma has to be true for the query to
 trigger.
 
+```css
+@media screen and (min-width: 992px) and (max-width: 1136px) {
+  body {
+    background-color: blue;
+  }
+}
+```
+
+
+```css
+@media screen and (min-width: 992px), (max-width: 1136px) {
+  body {
+    background-color: blue;
+  }
+}
+
 #### (expression)
 
 We define conditional expressions by writing the criteria and wrapping it in
@@ -69,6 +125,14 @@ parentheses. The expression must evaluate to true in order for the query to
 trigger unless using a `,`. These expressions are followed by a set of `{}`
 curly braces that enclose the CSS selectors and rules that will be applied when
 the media query is triggered.
+
+```css
+@media (max-width: 992px) {
+  body {
+    background-color: blue;
+  }
+}
+```
 
 ### Usage
 
@@ -169,14 +233,14 @@ for smaller phones.
 ## Conclusion
 
 CSS Media Queries provide us a way to alter our CSS at specific screen
-sizes. Using the `max-width` condition expressions to trigger styles below 
-a certain size and the `min-width` condition expressions to trigger styles 
-above a certain size can help you build powerful, flexible interfaces for 
-various screen sizes and devices. Instead of trying to target specific device
-sizes, use the in-browser dev tools for experimentation, and allow your unique 
-content to determine at which sizes to write media query break points. Write 
-media queries as you need them at whatever size your content starts to 
-become unsightly.
+sizes by setting _breakpoints_ at different screen widths. Using the 
+`max-width` condition expressions to trigger styles below  a certain
+size and the `min-width` condition expressions to trigger styles above
+a certain size can help you build powerful, flexible interfaces for various
+screen sizes and devices. Instead of trying to target specific device sizes,
+use the in-browser dev tools for experimentation, and allow your unique content
+to determine at which sizes to write media query break points. Write media
+queries as you need them at whatever size your content starts to become unsightly.
 
 ## Resources
 
