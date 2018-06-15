@@ -12,10 +12,9 @@ building page layouts?
 
 ## Objectives
 
-1. What are breakpoints
-2. What is the purpose of media queries
-3. What is the media query syntax
-4. Where should break points be created
+1. What is the purpose of media queries
+2. What is the media query syntax
+3. Where should break points be created
 
 ## What is the Purpose of Media Queries?
 
