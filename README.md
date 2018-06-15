@@ -67,7 +67,15 @@ you want a CSS rule to apply to all devices, but _not_ screens smaller than
 `400px` wide.
 
 ```css
-@media [not|only] screen and (max-width: 992px) {
+@media only screen and (max-width: 992px) {
+  body {
+    background-color: blue;
+  }
+}
+```
+
+```css
+@media not screen and (max-width: 992px) {
   body {
     background-color: blue;
   }
