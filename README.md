@@ -121,7 +121,7 @@ We can use `and` and `,` to separate or combine conditions.
     background-color: blue;
   }
 }
-
+```
 #### (expression)
 
 We define conditional expressions by writing the test and wrapping it in
