@@ -247,8 +247,7 @@ queries as you need them at whatever size your content starts to become unsightl
 
 ## Resources
 
-- [MDN - CSS - Media
-- Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [MDN - CSS - Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 - [CSS Tricks - Media Queries](https://css-tricks.com/css-media-queries/)
 - [Simulate Mobile Devices with Device Mode in Google Chrome][dte]
 
