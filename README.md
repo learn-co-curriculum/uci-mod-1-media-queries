@@ -1,6 +1,12 @@
 # CSS Media Queries
 
-## Problem Statement
+## Learning Goals
+
+- Identify the purpose of media queries
+- Describe media query syntax
+- Identify where to create "breakpoints"
+
+## Introduction
 
 The key to designing and building responsive layouts is having your content
 respond to the size of the device (or "medium"). Your CSS can query the "media"
@@ -8,21 +14,15 @@ respond to the size of the device (or "medium"). Your CSS can query the "media"
 queries" are the focus of this lesson. By writing "media queries" you can can
 ensure your site looks great on all devices.
 
-## Objectives
-
-1. What is the purpose of media queries
-2. What is the media query syntax
-3. Where should "breakpoints" be created
-
-## What is the Purpose of Media Queries?
+## Identify the Purpose of Media Queries
 
 Media queries are a feature of CSS. They are sets of styles that are applied
 when the medium satisfies specific conditions. Media queries most frequently
 decide whether a group of CSS rules applies based on the device "viewport" (or,
-"screen") size.  The points at which the layout adjusts, based on some media
+"screen") size. The points at which the layout adjusts, based on some media
 property (or properties!), is called a "breakpoint".
 
-## What is the Media Query Syntax?
+## Describe Media Query Syntax
 
 Below are a few examples of syntax for writing a media query statement within
 our CSS code:
@@ -220,7 +220,7 @@ need to write the CSS for the properties we wish to change. With a set of
 different media queries, it is possible to have specific styling for mobile and
 desktop screen sizes, along with tablet screen sizes in between.
 
-## Where Should Break Points Be Created?
+## Identify Where to Create "breakpoints"
 
 Let your content determine where break points should fall. Use [Developer Tools and Emulators][dte] to discover where your content starts to break down. Then create
 an appropriate break point (media query at that width) to solve the issue. This
@@ -252,4 +252,3 @@ queries as you need them at whatever size your content starts to become unsightl
 - [Simulate Mobile Devices with Device Mode in Google Chrome][dte]
 
 [dte]: https://developers.google.com/web/tools/chrome-devtools/device-mode/
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/media-queries' title='Media Queries'>Media Queries</a> on Learn.co and start learning to code for free.</p>
