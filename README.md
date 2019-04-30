@@ -1,28 +1,27 @@
 # CSS Media Queries
 
-## Problem Statement
+## Learning Goals
+
+- Identify the purpose of media queries
+- Describe media query syntax
+- Identify where to create "breakpoints"
+
+## Introduction
 
 The key to designing and building responsive layouts is having your content
 respond to the size of the device (or "medium"). Your CSS can query the "media"
 (plural of "medium") to find out their sizes and proportions. These "media
-queries" are the focus of this lesson. By writing "media queries" you can can
-ensure your site looks great on all devices.
+queries" are the focus of this lesson. By writing "media queries" you can ensure your site looks great on all devices.
 
-## Objectives
-
-1. What is the purpose of media queries
-2. What is the media query syntax
-3. Where should "breakpoints" be created
-
-## What is the Purpose of Media Queries?
+## Identify the Purpose of Media Queries
 
 Media queries are a feature of CSS. They are sets of styles that are applied
 when the medium satisfies specific conditions. Media queries most frequently
 decide whether a group of CSS rules applies based on the device "viewport" (or,
-"screen") size.  The points at which the layout adjusts, based on some media
+"screen") size. The points at which the layout adjusts, based on some media
 property (or properties!), is called a "breakpoint".
 
-## What is the Media Query Syntax?
+## Describe Media Query Syntax
 
 Below are a few examples of syntax for writing a media query statement within
 our CSS code:
@@ -84,7 +83,7 @@ you want a CSS rule to apply to all devices, but _not_ screens smaller than
 
 #### `mediatype`
 
-Currently, the only well-supported media types are: screen, print, or all
+Currently, the only well-supported media types are screen, print, or all
 (meaning all devices). Mobile, tablet, and desktop devices all fall within the
 _screen_ mediatype, while _print_ is used for displaying content in a 'print
 preview' mode. Most commonly we are concerned only with _screen_.
@@ -157,20 +156,20 @@ p {
 }
 ```
 
-On the second line we provide some initial style that will be applied _unless_
+On the second line, we provide some initial style that will be applied _unless_
 our media query triggers. We have set our paragraph to have red text. On line 5,
 we create a media query using `@media` and set it to `only` trigger for `screen`
 devices that have a `max-width` of `800px`.
 
-In other words, the style will only be applied on screens that are less than
+In other words, the style will only be applied to screens that are less than
 `801px` wide. Following the condition are a pair of curly braces (`{}`) that
 enclose the style(s) to be applied when the condition is met. In our case, on
 screens that are `800px` wide or less, we change the text color of paragraphs to
 green instead of red.
 
-For our size conditions we can use the properties `min-width`, `max-width`,
+For our size conditions, we can use the properties `min-width`, `max-width`,
 `min-height`, and `max-height`, all referring to the size of the device's
-viewport (i.e., the screen size). Above, we looked at `max-width`; now let's
+viewport (i.e., screen size). Above, we looked at `max-width`; now let's
 explore `min-width`:
 
 ```css
@@ -215,20 +214,20 @@ Here we are changing the text color to green only on screens that are between
 `400px` and `800px`.
 
 One nice thing about media queries is that they automatically inherit all of the
-styles written outside of their `{}` braces. So inside the media query we only
+styles written outside of their `{}` braces. So inside the media query, we only
 need to write the CSS for the properties we wish to change. With a set of
 different media queries, it is possible to have specific styling for mobile and
 desktop screen sizes, along with tablet screen sizes in between.
 
-## Where Should Break Points Be Created?
+## Identify Where to Create "breakpoints"
 
-Let your content determine where break points should fall. Use [Developer Tools and Emulators][dte] to discover where your content starts to break down. Then create
-an appropriate break point (media query at that width) to solve the issue. This
-will ensure that your content looks good on any and all devices not just the
+Let your content determine where breakpoints should fall. Use [Developer Tools and Emulators][dte] to discover where your content starts to break down. Then create
+an appropriate breakpoint (media query at that width) to solve the issue. This
+will ensure that your content looks good on any and all devices, not just the
 popular ones.
 
 Advanced layout techniques, such as grid (which will be covered in later
-lessons), allow us to keep media query break points to a minimum. You can, for
+lessons), allow us to keep media query breakpoints to a minimum. You can, for
 instance, set a media query for `max-width: 414px`, the width of the iPhone 6+,
 which will affect basically all mobile phones, but allow CSS grid to
 dynamically adjust the width of web page elements for smaller phones.
@@ -237,12 +236,12 @@ dynamically adjust the width of web page elements for smaller phones.
 
 CSS Media Queries provide us a way to alter our CSS at specific screen
 sizes by setting _breakpoints_ at different screen widths. Using the
-`max-width` condition expressions to trigger styles below  a certain
+`max-width` condition expressions to trigger styles below a certain
 size and the `min-width` condition expressions to trigger styles above
 a certain size can help you build powerful, flexible interfaces for various
 screen sizes and devices. Instead of trying to target specific device sizes,
 use the in-browser dev tools for experimentation, and allow your unique content
-to determine at which sizes to write media query break points. Write media
+to determine at which sizes to write media query breakpoints. Write media
 queries as you need them at whatever size your content starts to become unsightly.
 
 ## Resources
@@ -252,4 +251,3 @@ queries as you need them at whatever size your content starts to become unsightl
 - [Simulate Mobile Devices with Device Mode in Google Chrome][dte]
 
 [dte]: https://developers.google.com/web/tools/chrome-devtools/device-mode/
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/media-queries' title='Media Queries'>Media Queries</a> on Learn.co and start learning to code for free.</p>
